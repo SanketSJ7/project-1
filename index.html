@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+                       <title>Login Form</title>
+                       <link href="./style.css" type="" rel="stylesheet" />
+                       <style>
+                         
+                       </style>
+    </head>
+    <body>
+         <div class="form-container">
+               <form  id="form">
+                <!-- first seection -->
+                   <div class="form-group">
+                      <label>Email:</label>
+                      <input type="email" id="email" placeholder="Enter Email" required />  
+                   </div>
+                   <!-- second section -->
+                   <div class="form-group">
+                      <label>Password:</label>
+                      <input type="password" id="password" placeholder="Enter Password" required />
+                   </div>
+                   <!-- third section -->
+                   <button type="submit">Login</button>
+               </form>
+         </div>
+        <script>
+              const form=document.getElementById('form');
+              form.addEventListener('submit',function(event){
+                  event.preventDefault();
+                   const email=document.getElementById('email').value;
+                   const password=document.getElementById('password').value;
+                   console.log("Email:",email);
+                   console.log("Password:",password);
+              });
+        </script>
+    </body>
+</html>
